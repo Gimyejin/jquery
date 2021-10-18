@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex01</title>
+<script src="jquery-3.6.0.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* 현재페이지에서 준비해두겠다 이 함수를 그리고 내용을 실행해주세요*/
+		console.log('111')
+	})
+	$().ready(function(){
+		console.log('222')
+	})
+	$(function(){
+		console.log('333')
+		$("button").click(function(){
+			//$("p").hide()/* 버튼 클릭시 p를 숨기는 기능 */
+		})
+		$("#show").click(function(){
+			$("p").show()/* 숨긴거 보여주기 */
+		})
+	})/* 셋다 같은 의미 */
+	function my_show(){
+		//$("p").hide() p태그
+		$("#p").hide() //id가 p인 태그
+		document.getElementById("p").style.display='none'
+	}
+</script>
+</head>
+<body>
+	<p id="p">Hello</p>
+	<button onclick="my_show()">click</button>
+	<button id="show">look</button>
+</body>
+</html>
